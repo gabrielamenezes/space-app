@@ -80,12 +80,6 @@ button,
 select { 
   text-transform: none;
 }
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button;
-}
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -129,7 +123,6 @@ textarea {
 }
 
 [type="search"] {
-  -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 

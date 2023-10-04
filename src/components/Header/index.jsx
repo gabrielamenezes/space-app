@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import InputText from "../InputText";
 
 const StyledHeader = styled.header`
     padding: 60px 0;
@@ -8,10 +9,12 @@ const StyledHeader = styled.header`
         max-width: 212px;
     }
 `
+
 const Header = () => {
     return (
         <StyledHeader>
             <img src="images/logo.png" alt="Logo do SpaceApp" />
+            <InputText placeholder="O que você procura?" type="text"/>
         </StyledHeader>
     )
 }
