@@ -9,15 +9,29 @@ const FundoGradiente = styled.div`
   width: 100%;
   min-height: 100vh;
 `
+const AppContainer = styled.div`
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+`
 
+const MainContainer = styled.main`
+  display: flex;
+  gap: 24px;
+`
 function App() {
 
   return (
     <FundoGradiente>
       <GlobalStyle/>
-      <Header/>
-      <AsideMenu/>
-      <Banner text="A galeria mais completa de fotos do espaço!" backgroundImage="/src/assets/banner.png"/>
+      <AppContainer>
+        <Header/>
+        <MainContainer>
+          <AsideMenu/>
+          <Banner text="A galeria mais completa de fotos do espaço!" backgroundImage="/src/assets/banner.png"/>
+        </MainContainer>
+      </AppContainer>
+      
     </FundoGradiente>
   )
 }
