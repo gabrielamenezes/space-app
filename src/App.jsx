@@ -5,6 +5,7 @@ import AsideMenu from "./components/AsideMenu";
 import Banner from "./components/Banner";
 import Gallery from "./components/Gallery";
 import fotos from './fotos.json'
+import ModalZoom from "./components/ModalZoom";
 import { useState } from "react";
 
 const FundoGradiente = styled.div`
@@ -29,6 +30,7 @@ const GalleryContainer = styled.section`
 `
 const App = () => {
   const [fotosDaGaleria, setFotosDaGaleria] = useState(fotos)
+  const [fotoSelecionada, setFotoSelecionada] = useState(null)
   return (
     <FundoGradiente>
       <GlobalStyle/>
@@ -38,11 +40,11 @@ const App = () => {
           <AsideMenu/>
           <GalleryContainer>
             <Banner text="A galeria mais completa de fotos do espaço!" backgroundImage="/src/assets/banner.png"/>
-            <Gallery fotos={fotosDaGaleria} />
+            <Gallery fotos={fotosDaGaleria} aoFotoSelecionada={foto => setFotoSelecionada(foto)}/>
           </GalleryContainer>
         </MainContainer>
       </AppContainer>
-      
+      <ModalZoom foto={fotoSelecionada}/>
     </FundoGradiente>
   )
 }
