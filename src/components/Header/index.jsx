@@ -10,11 +10,11 @@ const StyledHeader = styled.header`
     }
 `
 
-const Header = () => {
+const Header = ({filtro, setFiltro}) => {
     return (
         <StyledHeader>
             <img src="images/logo.png" alt="Logo do SpaceApp" />
-            <InputText placeholder="O que você procura?" type="text"/>
+            <InputText placeholder="O que você procura?" type="text" setFiltro={setFiltro} filtro={filtro}/>
         </StyledHeader>
     )
 }

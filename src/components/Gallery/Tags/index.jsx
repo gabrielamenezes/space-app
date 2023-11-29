@@ -30,12 +30,12 @@ const Tag = styled.button`
       border-color: #C98CF1;
     }
 `
-const Tags = () =>  {
+const Tags = ({setTag}) =>  {
   return (
     <ContainerSectionTags>
         <p>Busque por tags:</p>
         <ContainerTags>
-          {tags.map(tag => <Tag key={tag.id}><TagTitulo>{tag.titulo}</TagTitulo></Tag>)}
+          {tags.map(tag => <Tag onClick={() => setTag(tag.tag)} key={tag.id}><TagTitulo>{tag.titulo}</TagTitulo></Tag>)}
         </ContainerTags>
     </ContainerSectionTags>
   )

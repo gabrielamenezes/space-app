@@ -16,10 +16,10 @@ const SecaoFluida = styled.section`
     flex-grow: 1;
 `
 
-const Gallery = ({fotos = [], aoFotoSelecionada, aoAlternarFavorito}) => {
+const Gallery = ({fotos = [], aoFotoSelecionada, aoAlternarFavorito, setTag}) => {
     return (
         <>
-            <Tags/>
+            <Tags setTag={setTag} />
             <GaleriaContainer>
                 <SecaoFluida>
                     <Titulo>Navegue pela galeria</Titulo>
