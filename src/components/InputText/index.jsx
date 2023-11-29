@@ -30,13 +30,13 @@ const IconeLupa = styled.img`
     height: 38px;
 `;
 
-const CampoTexto = (props) => {
+const InputText = (props) => {
     return (
         <StyledContainer>
-            <StyledInputText {...props} />
+            <StyledInputText {...props}/>
             <IconeLupa src={search} alt="ícone de lupa" />
         </StyledContainer>
     )
 }
 
-export default CampoTexto
+export default InputText

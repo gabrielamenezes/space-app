@@ -16,7 +16,7 @@ const SecaoFluida = styled.section`
     flex-grow: 1;
 `
 
-const Gallery = ({fotos = [], aoFotoSelecionada}) => {
+const Gallery = ({fotos = [], aoFotoSelecionada, aoAlternarFavorito}) => {
     return (
         <>
             <Tags/>
@@ -24,7 +24,7 @@ const Gallery = ({fotos = [], aoFotoSelecionada}) => {
                 <SecaoFluida>
                     <Titulo>Navegue pela galeria</Titulo>
                     <ImagensContainer>
-                        {fotos.map(foto => <Imagem aoZoomSolicitado={aoFotoSelecionada} key={foto.id} foto={foto}></Imagem>)}
+                        {fotos.map(foto => <Imagem aoAlternarFavorito={aoAlternarFavorito} aoZoomSolicitado={aoFotoSelecionada} key={foto.id} foto={foto}></Imagem>)}
                     </ImagensContainer>
                 </SecaoFluida>
 
